@@ -1,21 +1,31 @@
-# APE Webapp v10
+# APE Webapp Demo FTP
 
-Correzioni maggiorazioni:
-- tipo contratto/arredamento ora è selezione esclusiva
-- non puoi selezionare insieme 3+2, 4+2, 5+2, 6+2 o transitorio
-- 3+2 semplice = 0%
-- 3+2 arredato parziale = +6%
-- 3+2 arredato totale = +12%
-- vincoli come scelta esclusiva:
-  - nessuno
-  - immobile vincolato +30%
-  - fabbricato vincolato +15%
+Versione demo web protetta da password.
 
-Avvio:
+## Include
+- Basic Auth demo
+- banner demo
+- watermark PDF: DEMO - NON VALIDO
+- simulatore
+- modulo A4
+- tariffe/configurazione
+- pratiche
+
+## Avvio locale
+```bash
 npm install
 npm run dev
+```
 
-Pagine:
-http://localhost:3000/simulatore
-http://localhost:3000/tariffe
-http://localhost:3000/pratiche
+## Accesso
+Default:
+- utente: demo
+- password: demoape
+
+Per cambiare credenziali:
+crea `.env.local` partendo da `.env.example`.
+
+## Pubblicazione
+Leggi:
+- `ISTRUZIONI_FTP_NODE.md`
+- `COMANDI_SERVER.md`

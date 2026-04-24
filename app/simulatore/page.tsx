@@ -191,6 +191,7 @@ export default function SimulatorePage() {
     <main style={{ maxWidth: 1080, margin: "40px auto", padding: 16 }}>
       <style>{`
         @page { size: A4; margin: 10mm; }
+        .demo-watermark { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; opacity: 0.08; font-size: 46px; font-weight: 900; transform: rotate(-30deg); }
         @media print {
           body { background: white !important; }
           .no-print { display: none !important; }
@@ -487,7 +488,8 @@ function CompiledModule() {
         <button onClick={() => window.print()} style={{ padding: "10px 14px" }}>Stampa / Salva PDF A4</button>
       </div>
 
-      <div className="a4-sheet" style={{ width: "210mm", minHeight: "297mm", margin: "0 auto", background: "#fff", padding: "10mm", boxSizing: "border-box", border: "1px solid #ddd" }}>
+      <div className="a4-sheet" style={{ width: "210mm", minHeight: "297mm", margin: "0 auto", background: "#fff", padding: "10mm", boxSizing: "border-box", border: "1px solid #ddd", position: "relative" }}>
+        <div className="demo-watermark">DEMO - NON VALIDO</div>
         <div style={{ display: "grid", gridTemplateColumns: "50mm 1fr", gap: "8mm", alignItems: "start" }}>
           <div>
             <div style={{ fontWeight: 800, color: "#b83a3a", fontSize: 16, lineHeight: 1.1 }}>ASSOCIAZIONE<br />PROPRIETÀ<br />EDILIZIA</div>
